@@ -3,7 +3,7 @@
 Live preview: <a href="https://themalni.github.io/livet-documentation/">Livet Documentation</a></p><br>
 
 <p align="center">
-<img src="https://cloud.githubusercontent.com/assets/12295765/22391068/358fe502-e4ef-11e6-8c70-17d4274d89fa.jpg" width="600" height="554" alt="Livet Documentation">
+<img src="https://cloud.githubusercontent.com/assets/12295765/22391248/803ca6ca-e4f0-11e6-89db-275054d91878.jpg" width="600" height="554" alt="Livet Documentation">
 </p>
 
 
