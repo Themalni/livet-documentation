@@ -12,14 +12,21 @@
 
   <link rel="stylesheet" type="text/css" href="css/normalize.css"/><!-- reset for browsers -->
   <link rel="stylesheet" type="text/css" href="css/documentation-stylesheet.css"/><!-- custom stylesheet -->
-  <link rel="stylesheet" media="screen" href="css/media.css"/><!-- mobile stylesheet -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"><!-- font-awesome icons -->
+  <link rel="stylesheet" media="screen" href="css/font-awesome.min.css"/><!-- mobile stylesheet -->
+
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,600" rel="stylesheet">
 
+
+
 </head>
 <body>
-  <nav class="nav">
+  <div class="mobile-nav">
+    <div class="hamburger hamburger-change pull-right">
+      <span></span>
+    </div>
+  </div>
+  <nav>
     <ul class="nav-links">
       <li class="about-panel">About <span class="fa fa-caret-down indicator" id="ab-caret" data-menu="#ab-menu" data-caret="#ab-caret"></span>
         <ul class="sub-menu about-sub-menu" id="ab-menu">
@@ -57,7 +64,8 @@
     </ul>
   </nav>
 
-  <div class="main">
+  <div id="main">
+    <span class="fa fa-arrow-circle-up fa-3x"></span>
   <!-- About Section -->
   <section id="about">
   <h1>Welcome to LIVET Documentation</h1>
@@ -65,7 +73,7 @@
     with the installation and editing process.
     With this documentation your new website will be up and running in no time with minimal effort.</p>
   <h2>About LIVET</h2>
-    <p>LIVET is a versatile one page template built with Bootstrap.
+    <p>LIVET is a versatile one page template build with Bootstrap.
     It is perfect for digital agencies, startups, personal websites,
     designer portfolios and for other creative minds.</p>
     <p>Your visitors will appreciate the single page design,
@@ -133,7 +141,7 @@
     </ul>
   <p>A section tag looks like this:</p>
   <div class="img-container overflow">
-    <img class="printscreen" src="screenshots/1b.JPG" alt="section tag">
+    <img class="printscreen" src="Screenshots/1b.jpg" alt="section tag">
   </div>
   <p>The only two special sections are <span class="bold-text">nav</span> and <span class="bold-text">footer</span>. Nav is at the top of the
     page and is considered a navigation holding the links to all the sections on the page.
@@ -144,7 +152,7 @@
     its end and as well as holding some useful information for visitors.</p>
   <p>You can find navigation by the nav tag:</p>
   <div class="img-container overflow">
-    <img class="printscreen" src="screenshots/2.JPG" alt="navigation tag">
+    <img class="printscreen" src="Screenshots/2.jpg" alt="navigation tag">
   </div>
   <!-- Bootstrap Grid -->
   <h2 id="grids">Bootstrap Grid</h2>
@@ -152,16 +160,16 @@
     Content can be laid out in any number of columns between 1 and 12.
     LIVET has a three column layout on desktop which turns into
     a 1 column layout on mobile screens.</p>
-  <div class="img-container">
-    <img class="printscreen desktop" src="screenshots/3.jpg" alt="navigation tag">
-    <img class="printscreen mobile" src="screenshots/3mob.jpg" alt="navigation tag">
+  <div class="img-container-images">
+    <img class="printscreen desktop" src="Screenshots/3.jpg" alt="navigation tag">
+    <img class="printscreen-img mobile" src="Screenshots/3mob.jpg" alt="navigation tag">
   </div>
   <p>Exception is the second grid in <span class="bold-text">"Services"</span>
     section which turns from 3 columns on desktop into 2 columns on tablets
     and then into 1 column on mobile screens.</p>
-  <div class="img-container">
-    <img class="printscreen desktop" src="screenshots/4.jpg" alt="navigation tag">
-    <img class="printscreen mobile" src="screenshots/4mob.jpg" alt="navigation tag">
+  <div class="img-container-images">
+    <img class="printscreen desktop" src="Screenshots/4.jpg" alt="navigation tag">
+    <img class="printscreen-img mobile" src="Screenshots/4mob.jpg" alt="navigation tag">
 
   </div>
   <p>The system is simple, there are rows which keep all the columns in one line
@@ -190,7 +198,7 @@
     All you need to do is find class <span class="bold-text">"col-md-4"</span> and change it to
   <span class="bold-text">"col-md-6"</span>.</p>
   <div class="img-container overflow">
-    <img class="printscreen" src="screenshots/5.JPG" alt="columns">
+    <img class="printscreen" src="Screenshots/5.jpg" alt="columns">
   </div>
   <p>One more tip, the columns don't always have to be identical in width, you can make one column width
     equal to 8 columns, the other to 4 (8+4=12). Classes would look like this: <span class="bold-text">
@@ -204,291 +212,272 @@
     <p>In addition to the listed components above Carousel with the testimonials in LIVET has stars
       which are just a part of our sliders contents. For more information on Bootstrap Carousel,
       please look into <a class="bold-text" href="#how-to">How To</a> section.</p>
-  <div class="img-container">
-    <img class="printscreen mobile" src="screenshots/slider.jpg" alt="carousel">
+  <div id="carousel-img" class="img-container-images">
+    <img class="printscreen-img desktop" src="Screenshots/slider.jpg" alt="carousel">
+    <img class="printscreen-img mobile" src="Screenshots/slider.jpg" alt="carousel">
   </div>
   </section><!-- END Structure Section -->
 
   <!-- How-to Section -->
   <section id="how-to">
-  <h2 class="how-to__title">How To</h2>
-    <p>This section will help you to make any desired changes of the template.</p>
+    <h2>How To</h2>
+      <p>This section will help you to make any desired changes of the template. We added a solution to all the nessesary elements you might want to customize.</p>
 
-  <h2 id="nav">Navigation</h2>
-    <p>If you wish to add some extra links to the navigation do the following:</p>
-    <p>In the <span class="bold-text">index.html</span> file find tag <span class="bold-text">&lt;nav&gt;</span></p>
-  <div class="img-container overflow">
-    <img class="printscreen" src="screenshots/6.JPG" alt="navigation">
-  </div>
-  <p>Next go down to tag <span class="bold-text">&lt;ul&gt;</span> with the class
-  <span class="bold-text">"main-nav"</span>,
-  underneath you will find a comment <span class="bold-text italic-text">
-  &lt;!--Navigation links here --&gt;</span>.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/7.JPG" alt="navigation">
-  </div>
-  <p>To remove a link from navigation completely, delete the whole line from <span class="bold-text">&lt;li&gt;</span> to
-  <span class="bold-text">&lt;/li&gt;</span> tag.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/7a.JPG" alt="navigation">
-  </div>
-  <p>To add a link, you need to copy the whole line from <span class="bold-text">&lt;li&gt;</span> to
-  <span class="bold-text">&lt;/li&gt;</span> tag, insert it above or underneath one of the existing lines with links
-  and do the following changes. To change the name of the link which will be displayed on the website page,
-  change this part of the line:</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/7b.JPG" alt="navigation">
-  </div>
+    <h2 id="nav">Navigation</h2>
+      <p>If you wish to add some extra links to the navigation do the following:</p>
+      <p>In the <span class="bold-text">index.html</span> file find tag <span class="bold-text">&lt;nav&gt;</span></p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/6.jpg" alt="navigation">
+    </div>
+      <p>Next go down to tag <span class="bold-text">&lt;ul&gt;</span> with the class
+        <span class="bold-text">"main-nav"</span>, underneath you will find a comment <span class="bold-text italic-text">&lt;!--Navigation links here --&gt;</span>.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/7.jpg" alt="navigation">
+    </div>
+    <p>To remove a link from navigation completely, delete the whole line from <span class="bold-text">&lt;li&gt;</span> to
+      <span class="bold-text">&lt;/li&gt;</span> tag.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/7a.jpg" alt="navigation">
+    </div>
+    <p>To add a link, you need to copy the whole line from <span class="bold-text">&lt;li&gt;</span> to
+      <span class="bold-text">&lt;/li&gt;</span> tag, insert it above or underneath one of the existing lines with links
+      and do the following changes. To change the name of the link which will be displayed on the website page,
+      change this part of the line:</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/7b.jpg" alt="navigation">
+    </div>
 
-  <p>Then you need to change the name of the section you want to make a connection to in the
-  <span class="bold-text">&lt;a&gt;</span> tag.</p>
+    <p>Then you need to change the name of the section you want to make a connection to in the <span class="bold-text">&lt;a&gt;</span> tag.</p>
 
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/7c.JPG" alt="navigation">
-  </div>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/7c.jpg" alt="navigation">
+    </div>
 
   <h2 id="images">Images</h2>
-  <p>You will need to add your own images to the template as the images in the live demo are for the demonstration purposes only.<br>
-  Firstly, go to folder <span class="bold-text">"Template"</span> and add your photos to the folder
-  <span class="bold-text">"images"</span>.<br>
-  Next in the <span class="bold-text">index.html</span> file find the section you wish to add the image to
-  and find tag <span class="bold-text">&lt;img&gt;</span>.
-  Remove this link <span class="bold-text">http://placehold.it/1920x1150/b3b3b3</span>,
-  then add <span class="bold-text">images
-  </span> (name of the folder) and
-  then add the name of the image and the image format here:
-  </p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/8.JPG" alt="images">
-  </div>
-  <p>Some sections of LIVET such as <span class="bold-text">"About", "Team"</span> and
-  <span class="bold-text">"Portfolio"</span> have some
-  images set as backgrounds from <span class="bold-text">main_style.css</span> file.
-  In this case you need to find the <span class="bold-text">id</span>
-  of the section, then the <span class="bold-text">class</span> of the parent element and then change the image name and
-  the format in the <span class="bold-text">"background-image"</span> property.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/10.JPG" alt="images">
-  </div>
+    <p>You will need to add your own images to the template as the images in the live demo are for the demonstration purposes only.<br>
+      Firstly, go to folder <span class="bold-text">"Template"</span> and add your photos to the folder
+      <span class="bold-text">"images"</span>.<br>
+      Next in the <span class="bold-text">index.html</span> file find the section you wish to add the image to
+      and find tag <span class="bold-text">&lt;img&gt;</span>.
+      Remove this link <span class="bold-text">http://placehold.it/1920x1150/b3b3b3</span>,
+      then add <span class="bold-text">images
+      </span> (name of the folder) and
+      then add the name of the image and the image format here:
+    </p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/8.jpg" alt="images">
+    </div>
+    <p>Some sections of LIVET such as <span class="bold-text">"About", "Team"</span> and
+      <span class="bold-text">"Portfolio"</span> have some
+      images set as backgrounds from <span class="bold-text">main_style.css</span> file.
+      In this case you need to find the <span class="bold-text">id</span>
+      of the section, then the <span class="bold-text">class</span> of the parent element and then change the image name and
+      the format in the <span class="bold-text">"background-image"</span> property.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/10.jpg" alt="images">
+    </div>
   <h2 id="headers">Headers</h2>
-  <p>To change text of a header, find the section it belongs to, then find
-  <span class="bold-text">&lt;h1&gt;</span> tag and edit the text.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/11.JPG" alt="headers">
-  </div>
-  <p>If you do not wish the headers to be displayed in uppercase format just remove class
-  <span class="bold-text">"text-uppercase"</span>.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/11a.JPG" alt="headers">
-  </div>
-  <p>If you need to change some styling of the headers, go to <span class="bold-text">main_style.css</span>,
-  find <span class="bold-text">h1</span> element and change the required properties.<br>
-  For example to change the font, change the name of the <span class="bold-text">font-family</span>.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/12.JPG" alt="headers">
-  </div>
+    <p>To change text of a header, find the section it belongs to, then find <span class="bold-text">&lt;h1&gt;</span> tag and edit the text.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/11.jpg" alt="headers">
+    </div>
+    <p>If you do not wish the headers to be displayed in uppercase format just remove class <span class="bold-text">"text-uppercase"</span>.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/11a.jpg" alt="headers">
+    </div>
+    <p>If you need to change some styling of the headers, go to <span class="bold-text">main_style.css</span>,
+      find <span class="bold-text">h1</span> element and change the required properties.<br>
+      For example to change the font, change the name of the <span class="bold-text">font-family</span>.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/12.jpg" alt="headers">
+    </div>
   <h2 id="icons">Icons</h2>
-
-  <p>For LIVET we used Font Awesome and Linearicons vector icons to display as graphic indicators
-  as well as for the social buttons.<br>
-  To add a Font Awesome icon, you need to create a span with the following classes:
-  <span class="bold-text">"fa"</span>, which is a general class for Font Awesome icons,
-  <span class="bold-text">name</span> of the icon and the
-  <span class="bold-text">size</span>.</p>
-
-  <p>List of all available Font Awesome icons for your disposal
-  can be found on <a class="bold-text" href="http://fontawesome.io/icons/">Font Awesome</a>
-  website. Just copy the name of the icon and add it as class to the span.</p>
-
-  <p>To increase size of an icon use the following classes:</p>
-
-  <ul class="ul-dotted">
-  <li><span class="bold-text">fa-lg</span></li>
-  <li><span class="bold-text">fa-2x</span></li>
-  <li><span class="bold-text">fa-3x</span></li>
-  <li><span class="bold-text">fa-4x</span></li>
-  <li><span class="bold-text">fa-5x</span></li>
-  </ul>
-  <p>To change color of a Font Awesome icon go to
-  <span class="bold-text">main_style.css</span> file,
-  find section you want to add an icon to, create a class with the name of the icon
-  and set text color property to your desired color.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/16.JPG" alt="social btn">
-  </div>
-  <p>Here is an example of a span with a Font Awesome icon</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/13.JPG" alt="social btn">
-  </div>
-  <p>To display a Linearicon icon is similar, the only difference is that not only color, but also size should
-  be declared in the <span class="bold-text">main_style.css</span> file.
-  General class is <span class="bold-text">lnr</span> and the list of all icons and their names can
-  be found on their website
-  <a class="bold-text" href="https://linearicons.com/free">Linearicons</a>.<br>
-  Original size of the Linearicons icons is <span class="bold-text">20px</span>,
-  to achieve the best results increase
-  it by <span class="bold-text">20px</span> increments,
-  so the next size should be <span class="bold-text">40px</span>.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/15a.JPG" alt="social btn">
-  </div>
-  <p>Here is an example of a span with a Linearicon icon.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/14.JPG" alt="social btn">
-  </div>
+    <p>For LIVET we used Font Awesome and Linearicons vector icons to display as graphic indicators
+      as well as for the social buttons.<br>
+      To add a Font Awesome icon, you need to create a span with the following classes:
+      <span class="bold-text">"fa"</span>, which is a general class for Font Awesome icons,
+      <span class="bold-text">name</span> of the icon and the
+      <span class="bold-text">size</span>.</p>
+    <p>List of all available Font Awesome icons for your disposal
+      can be found on <a class="bold-text" href="http://fontawesome.io/icons/">Font Awesome</a>
+      website. Just copy the name of the icon and add it as class to the span.</p>
+    <p>To increase size of an icon use the following classes:</p>
+      <ul class="ul-dotted">
+        <li><span class="bold-text">fa-lg</span></li>
+        <li><span class="bold-text">fa-2x</span></li>
+        <li><span class="bold-text">fa-3x</span></li>
+        <li><span class="bold-text">fa-4x</span></li>
+        <li><span class="bold-text">fa-5x</span></li>
+      </ul>
+    <p>To change color of a Font Awesome icon go to
+      <span class="bold-text">main_style.css</span> file,
+      find section you want to add an icon to, create a class with the name of the icon
+      and set text color property to your desired color.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/16.jpg" alt="social btn">
+    </div>
+    <p>Here is an example of a span with a Font Awesome icon</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/13.jpg" alt="social btn">
+    </div>
+    <p>To display a Linearicon icon is similar, the only difference is that not only color, but also size should
+      be declared in the <span class="bold-text">main_style.css</span> file.
+      General class is <span class="bold-text">lnr</span> and the list of all icons and their names can
+      be found on their website
+      <a class="bold-text" href="https://linearicons.com/free">Linearicons</a>.<br>
+      Original size of the Linearicons icons is <span class="bold-text">20px</span>,
+      to achieve the best results increase
+      it by <span class="bold-text">20px</span> increments,
+      so the next size should be <span class="bold-text">40px</span>.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/15a.jpg" alt="social btn">
+    </div>
+    <p>Here is an example of a span with a Linearicon icon.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/14.jpg" alt="social btn">
+    </div>
   <h2 id="colors">Colors</h2>
-
-  <p>To change a color of an element, go to <span class="bold-text">main_style.css</span> file,
-  find the element you want to edit and change its text color, background color,
-  border color property. <br>
-  Here are some examples:</p>
-  <div class="img-container overflow">
-  <img class="printscreen padded" src="screenshots/17.JPG" alt="social btn">
-  <img class="printscreen padded" src="screenshots/20.JPG" alt="social btn">
-  <img class="printscreen" src="screenshots/18.JPG" alt="social btn">
-  </div>
+    <p>To change a color of an element, go to <span class="bold-text">main_style.css</span> file,
+      find the element you want to edit and change its text color, background color,
+      border color property. <br>
+      Here are some examples:</p>
+    <div class="img-container overflow">
+      <img class="printscreen padded" src="Screenshots/17.jpg" alt="social btn">
+      <img class="printscreen padded" src="Screenshots/20.jpg" alt="social btn">
+      <img class="printscreen" src="Screenshots/18.jpg" alt="social btn">
+    </div>
   <h2 id="fonts">Fonts</h2>
-  <p>LIVET template is using four different fonts.</p>
-  <ul class="ul-dotted">
-  <li>"Open Sans" (sans-serif) for Body Copy.</li>
-  <li>"Hind" (sans-serif) for Section Headers.</li>
-  <li>"Source Sans Pro" (sans-serif) for Buttons.</li>
-  <li>"Lora" (serif) for h3 in Header Section.</li>
-  </ul>
+    <p>LIVET template is using four different fonts.</p>
+      <ul class="ul-dotted">
+        <li>"Open Sans" (sans-serif) for Body Copy.</li>
+        <li>"Hind" (sans-serif) for Section Headers.</li>
+        <li>"Source Sans Pro" (sans-serif) for Buttons.</li>
+        <li>"Lora" (serif) for h3 in Header Section.</li>
+      </ul>
 
-  <p>All the fonts come from <a class="bold-text" href="https://www.google.com/fonts">Google Fonts</a>
-  and are free for everyone to use.<br>
-  If you want to change a font, go to Google Fonts websites, select a font you like,
-  choose the font weight (or multiple font weights), copy link to the font
-  and past it in the head section of <span class="bold-text">index.html</span> file.
-  </p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/21.JPG" alt="social btn">
-  </div>
-  <p>Next go back to Google Fonts and copy the name of the font
-  and add it to the element you want to change the font of in the
-  <span class="bold-text">main_style.css</span> file.</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/22.JPG" alt="social btn">
-  </div>
+    <p>All the fonts come from <a class="bold-text" href="https://www.google.com/fonts">Google Fonts</a>
+      and are free for everyone to use.<br>
+      If you want to change a font, go to Google Fonts websites, select a font you like,
+      choose the font weight (or multiple font weights), copy link to the font
+      and past it in the head section of <span class="bold-text">index.html</span> file.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/21.jpg" alt="social btn">
+    </div>
+    <p>Next go back to Google Fonts and copy the name of the font
+      and add it to the element you want to change the font of in the
+      <span class="bold-text">main_style.css</span> file.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/22.jpg" alt="social btn">
+    </div>
   <h2 id="buttons">Buttons</h2>
+    <p>Bootstrap has some ready to use classes to style buttons.
+      First one is the general button class <span class="bold-text">btn</span>,
+      it should be added first, then one of six color classes or outline classes.</p>
+    <div class="img-container-images">
+      <img class="printscreen desktop" src="Screenshots/23.jpg" alt="social btn">
+      <img class="printscreen-img mobile" src="Screenshots/23mob.jpg" alt="navigation tag">
+    </div>
+    <ul class="ul-dotted">
+      <li>btn-primary</li>
+      <li>btn-secondary</li>
+      <li>btn-success</li>
+      <li>btn-info</li>
+      <li>btn-warning</li>
+      <li>btn-danger</li>
+    </ul>
+    <div class="img-container overflow">
+      <img class="printscreen padded" src="Screenshots/24.jpg" alt="social btn">
+    </div>
+    <div class="img-container overflow">
+      <img class="printscreen desktop" src="Screenshots/25.jpg" alt="social btn">
+      <img class="printscreen-img mobile" src="Screenshots/25mob.jpg" alt="social btn">
+    </div>
+    <ul class="ul-dotted">
+      <li>btn-primary-outline</li>
+      <li>btn-secondary-outline</li>
+      <li>btn-success-outline</li>
+      <li>btn-info-outline</li>
+      <li>btn-warning-outline</li>
+      <li>btn-danger-outline</li>
+    </ul>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/26.jpg" alt="social btn">
+    </div>
 
-  <p>Bootstrap has some ready to use classes to style buttons.
-  First one is the general button class <span class="bold-text">btn</span>,
-  it should be added first, then one of six color classes or outline classes.</p>
-  <div class="img-container">
-  <img class="printscreen desktop" src="screenshots/23.JPG" alt="social btn">
-  <img class="printscreen mobile" src="screenshots/23mob.jpg" alt="navigation tag">
-  </div>
-  <ul class="ul-dotted">
-  <li>btn-primary</li>
-  <li>btn-secondary</li>
-  <li>btn-success</li>
-  <li>btn-info</li>
-  <li>btn-warning</li>
-  <li>btn-danger</li>
-  </ul>
-  <div class="img-container overflow">
-  <img class="printscreen padded" src="screenshots/24.JPG" alt="social btn">
-  </div>
-  <div class="img-container overflow">
-  <img class="printscreen desktop" src="screenshots/25.JPG" alt="social btn">
-  <img class="printscreen mobile" src="screenshots/25mob.jpg" alt="social btn">
-  </div>
-  <ul class="ul-dotted">
-  <li>btn-primary-outline</li>
-  <li>btn-secondary-outline</li>
-  <li>btn-success-outline</li>
-  <li>btn-info-outline</li>
-  <li>btn-warning-outline</li>
-  <li>btn-danger-outline</li>
-  </ul>
-
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/26.JPG" alt="social btn">
-  </div>
-
-  <p>There are many more useful classes to help you to style Bootstrap buttons,
-  all the needed information can be found on
-  <a class="bold-text" href="http://v4-alpha.getbootstrap.com/components/buttons/">
-  Bootstrap</a> website.<br>
-  Alternatively you can add your own custom style to buttons.
-  LIVET buttons all have their own custom style.
-  Below is the styling for the buttons in the Header Section.
-  </p>
-  <div class="img-container overflow">
-  <img class="printscreen padded" src="screenshots/27.JPG" alt="social btn">
-  <img class="printscreen" src="screenshots/28.JPG" alt="social btn">
-  </div>
+    <p>There are many more useful classes to help you to style Bootstrap buttons,
+      all the needed information can be found on
+      <a class="bold-text" href="http://v4-alpha.getbootstrap.com/components/buttons/">
+      Bootstrap</a> website.<br>
+      Alternatively you can add your own custom style to buttons.
+      LIVET buttons all have their own custom style.
+      Below is the styling for the buttons in the Header Section.</p>
+    <div class="img-container overflow">
+      <img class="printscreen padded" src="Screenshots/27.jpg" alt="social btn">
+      <img class="printscreen" src="Screenshots/28.jpg" alt="social btn">
+    </div>
   <h2 id="portfolio">Portfolio items</h2>
-  <p>LIVET Portfolio was built using Bootstrap grid.  If you are not familiar with how
-    Bootstrap Grid works, please refer to <a class="bold-text" href="#grids">this</a> section of the documentation first. </p>
-  <p>To display portfolio items in large size we used Bootstrap Modal Windows.
-    When a portfolio item is clicked, it gives an impression as if a new page was opened,
-    when in fact only an overlay window comes into the view. Modal windows have quite
-    a bit of code and that's why we placed them after <span class="bold-text">&lt;footer&gt;</span>.</p>
-  <p>To add more items into <span class="bold-text">Portfolio Section</span>, you need to create
-  the desired number of Portfolio images then create the same amount of new
-  <span class="bold-text">Modal Windows</span> and connect them with each other.</p>
-  <p>To create a new image find <span class="bold-text">Portfolio Section</span> and a comment
-    <span class="bold-text">&lt;!-- Start Portfolio Grid --&gt;</span>. The block of code between
-    <span class="bold-text">&lt;!-- image 1 --&gt;</span> and
-    <span class="bold-text">&lt;!-- end image 1 --&gt;</span> is one Portfolio image. Copy the block of code
-    and past it as the next Portfolio image.
-  </p>
-  <div class="img-container overflow">
-    <img class="printscreen" src="screenshots/29.JPG" alt="social btn">
-  </div>
-  <p>To create a new modal window, go to <span class="bold-text">index.html</span> file, find
-    first modal window item and copy the whole code starting from the comment
-    <span class="bold-text italic-text">&lt;!-- Modal 1 --&gt;</span> to the comment
-    <span class="bold-text italic-text">&lt;!-- END Modal 1 --&gt;</span>.
-    Then past this code as the next Modal Window item.</p>
-  <p>For detailed information on how Bootstrap Modal Windows work visit
-    <a class="bold-text" href="http://getbootstrap.com/javascript/#modals">this page</a>
-    on Bootstrap website.
-  </p>
-  <div class="img-container overflow">
-    <img class="printscreen" src="screenshots/30c.JPG" alt="social btn">
-  </div>
+    <p>LIVET Portfolio was built using Bootstrap grid.  If you are not familiar with how
+      Bootstrap Grid works, please refer to <a class="bold-text" href="#grids">this</a> section of the documentation first. </p>
+    <p>To display portfolio items in large size we used Bootstrap Modal Windows.
+      When a portfolio item is clicked, it gives an impression as if a new page was opened,
+      when in fact only an overlay window comes into the view. Modal windows have quite
+      a bit of code and that's why we placed them after <span class="bold-text">&lt;footer&gt;</span>.</p>
+    <p>To add more items into <span class="bold-text">Portfolio Section</span>, you need to create
+    the desired number of Portfolio images then create the same amount of new
+    <span class="bold-text">Modal Windows</span> and connect them with each other.</p>
+    <p>To create a new image find <span class="bold-text">Portfolio Section</span> and a comment
+      <span class="bold-text">&lt;!-- Start Portfolio Grid --&gt;</span>. The block of code between
+      <span class="bold-text">&lt;!-- image 1 --&gt;</span> and
+      <span class="bold-text">&lt;!-- end image 1 --&gt;</span> is one Portfolio image. Copy the block of code
+      and past it as the next Portfolio image.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/29.jpg" alt="social btn">
+    </div>
+    <p>To create a new modal window, go to <span class="bold-text">index.html</span> file, find
+      first modal window item and copy the whole code starting from the comment
+      <span class="bold-text italic-text">&lt;!-- Modal 1 --&gt;</span> to the comment
+      <span class="bold-text italic-text">&lt;!-- END Modal 1 --&gt;</span>.
+      Then past this code as the next Modal Window item.</p>
+    <p>For detailed information on how Bootstrap Modal Windows work visit
+      <a class="bold-text" href="http://getbootstrap.com/javascript/#modals">this page</a>
+      on Bootstrap website.</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/30c.jpg" alt="social btn">
+    </div>
   <h2 id="map">Map</h2>
-  <p>To change information of the location in <span class="bold-text">Google Map</span> go to folder <span class="bold-text">js</span>
-    and open file <span class="bold-text">custom-scripts.js</span> in the text editor.
-    Find section marked with the comment
-  <span class="bold-text italic-text"> /* Google Map JavaSctipt */ </span> There you will need to add your coordinates. </p>
-  <p>To find coordinates of a place is simple,
-  go to <a class="bold-text" href="https://www.google.com/maps">Google Maps</a>,
-  enter the address of the place, right click on the marker and click
-  <span class="bold-text">"What's here?"</span>
-  </p>
-  <div class="img-container">
-  <img class="printscreen desktop" src="screenshots/31.JPG" alt="social btn">
-  <img class="printscreen mobile" src="screenshots/31mob.jpg" alt="social btn">
-  </div>
-  <p>A card with the coordinates of the latitude and longitude will appear.
-  </p>
-  <div class="img-container">
-  <img class="printscreen desktop" src="screenshots/32.JPG" alt="social btn">
-  <img class="printscreen mobile" src="screenshots/32mob.jpg" alt="social btn">
-  </div>
-  <p>Copy the numbers and past those here:</p>
-  <div class="img-container overflow">
-  <img class="printscreen" src="screenshots/33.JPG" alt="social btn">
-  </div>
+    <p>To change information of the location in <span class="bold-text">Google Map</span> go to folder <span class="bold-text">js</span>
+      and open file <span class="bold-text">custom-scripts.js</span> in the text editor. Find section marked with the comment
+      <span class="bold-text italic-text"> /* Google Map JavaSctipt */ </span> There you will need to add your coordinates. </p>
+    <p>To find coordinates of a place is simple,
+      go to <a class="bold-text" href="https://www.google.com/maps">Google Maps</a>,
+      enter the address of the place, right click on the marker and click
+      <span class="bold-text">"What's here?"</span></p>
+    <div class="img-container">
+      <img class="printscreen desktop" src="Screenshots/31.jpg" alt="social btn">
+      <img class="printscreen-img mobile" src="Screenshots/31mob.jpg" alt="social btn">
+    </div>
+    <p>A card with the coordinates of the latitude and longitude will appear.</p>
+    <div class="img-container">
+      <img class="printscreen desktop" src="Screenshots/32.jpg" alt="social btn">
+      <img class="printscreen-img mobile" src="Screenshots/32mob.jpg" alt="social btn">
+    </div>
+    <p>Copy the numbers and past those here:</p>
+    <div class="img-container overflow">
+      <img class="printscreen" src="Screenshots/33.jpg" alt="social btn">
+    </div>
   <!-- Credits Section -->
   <section id="credits">
-  <h2>Credits</h2>
-  <p>We used some awesome stuff for LIVET and below are the credits to all the resources.</p>
-  <ul class="ul-dotted">
-    <li><a class="bold-text" href="http://getbootstrap.com/">Bootstrap</a> - the most popular HTML, CSS, and JS framework for developing responsive,
-      mobile first projects on the web.</li>
-    <li><a class="bold-text" href="https://www.google.com/fonts">Google Fonts</a> - beautiful Open Source (they are free!)
-      fonts for designers and developers.</li>
-    <li><a class="bold-text" href="">Font Awesome</a> - scalable vector icons that can be instantly customized.</li>
-    <li><a class="bold-text" href="https://linearicons.com/free">Linearicons</a> - ultra crisp line icons with integrity.</li>
-    <li><a class="bold-text" href="https://www.pexels.com/">Pexels</a> - best free stock photos in one place.</li>
-  </ul>
-
+    <h2>Credits</h2>
+    <p>We used some awesome stuff for LIVET and below are the credits to all the resources.</p>
+    <ul class="ul-dotted">
+      <li><a class="bold-text" href="http://getbootstrap.com/">Bootstrap</a> - the most popular HTML, CSS, and JS framework for developing responsive,
+        mobile first projects on the web.</li>
+      <li><a class="bold-text" href="https://www.google.com/fonts">Google Fonts</a> - beautiful Open Source (they are free!)
+        fonts for designers and developers.</li>
+      <li><a class="bold-text" href="">Font Awesome</a> - scalable vector icons that can be instantly customized.</li>
+      <li><a class="bold-text" href="https://linearicons.com/free">Linearicons</a> - ultra crisp line icons with integrity.</li>
+      <li><a class="bold-text" href="https://www.pexels.com/">Pexels</a> - best free stock photos in one place.</li>
+    </ul>
   </section><!-- END Credits Section -->
   </section><!-- END How to -->
 </div><!-- END Main -->
@@ -496,6 +485,17 @@
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script><!-- jQuery -->
   <script type="text/javascript" src="js/bootstrap.js"></script><!-- Bootstrap jQuery -->
   <script type="text/javascript" src="js/documentation_script.js"></script><!-- Custom jQuery -->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29336846-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
